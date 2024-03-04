@@ -82,5 +82,5 @@ fetch(url, init)
     .catch(error => {
         console.error("There was an error loading the movies:", error);
         const main = document.getElementById("contenedor-main");
-        main.innerHTML = "<h2 class='font-semibold text-white text-2xl'>There was an error loading the movies. Please try again later.</h2>";
+        main.innerHTML = "<h2 class='font-semibold text-white text-2xl'pb-24>Loading the movies... </h2>";
     });

@@ -3,13 +3,14 @@ const imagenUrlBase = "https://moviestack.onrender.com/static/";
 export function crearTarjeta(movie) {
     const imagenUrlCompleta = imagenUrlBase + movie.image;
     return `
-        <article class="text-center flex flex-col gap-3 w-10/12 md:w-5/12 xl:w-3/12 rounded bg-indigo-700 rounded-full hover:bg-indigo-500 transition duration-300 ease-in-out rounded-3xl p-5">
-            <img class="w-full" src="${imagenUrlCompleta}" alt="Imagen de ${movie.title}">
-            <h2>${movie.title}</h2>
-            <h3>${movie.genres.join(", ")}</h3>
-            <p>${movie.overview}</p> 
-            <a class="px-6 py-3 bg-violet-500 font-bold rounded-full hover:bg-violet-800 transition duration-300 ease-in-out" href="./details.html?id=${movie.id}&nombre=${movie.title}">DETAILS</a>
-        </article>
+    <article id="${movie.id}" class="text-center p-10 relative flex flex-col gap-3 w-10/12 md:w-5/12 xl:w-3/12 rounded bg-indigo-700 rounded-full hover:bg-indigo-500 transition duration-300 ease-in-out rounded-3xl p-5">
+    <button data-name="fav-button" data-id="${movie.id}" class="absolute top-6 right-6 bg-violet-700 hover:bg-indigo-500 text-xl font-semibold bg-opacity-70 rounded-full " type="button" style="transform: translate(50%, -50%);">🤍</button>
+    <img class="w-full" src="${imagenUrlCompleta}" alt="Imagen de ${movie.title}">
+    <h2>${movie.title}</h2>
+    <h3>${movie.genres.join(", ")}</h3>
+    <p>${movie.overview}</p> 
+    <a class="px-6 py-3 bg-violet-500 font-bold rounded-full hover:bg-violet-800 transition duration-300 ease-in-out" href="./details.html?id=${movie.id}&nombre=${movie.title}">DETAILS</a>
+</article>
     `;
 }
 
@@ -62,3 +63,4 @@ export function actualizarFiltro(movies, main, $input, selectGenero) {
 
     imprimirTarjetas(moviesFiltradas, main);
 }
+
