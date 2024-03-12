@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/images/Moviestack_favicon.png" >
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Movies</title>
+    <title>Favorites</title>
 </head>
-<body>
+<body class="bg-indigo-900">
     <header class="bg-indigo-900 flex-column w-full flex fixed bg-opacity-50">
         <div class="flex flex-row w-full text-white">
             <img  src="./assets/images/Moviestack_isotipo.png" alt="Logo" class="w-25 h-20 p-0">
@@ -23,25 +23,18 @@
     </header> 
     <div class="banner bg-cover bg-center h-96 w-full flex items-center justify-center text-white pt-20" style="background-image: url('./assets/images/banner_cine.png');">
         <div class="text-center">
-            <h1 class="text-4xl font-bold mb-4">IT´S TIME TO RELAX!</h1>
-            <p class="mb-8">A NEW SELECTION JUST FOR YOU</p>
-        <search class="flex flex-wrap gap-5 justify-center text-white">
-            <div class="w-3/4 flex justify-center relative">
-            <input id="inputBusqueda" class="w-60 h-9 rounded text-black ps-2" placeholder="Ej: Dune" type="text"></div>
-            <select id="selectGenero" class="text-black font-sans w-44 rounded">
-                <option value="">All Genres</option>
-            </select>
-        </search>
+            <h1 class="text-4xl font-bold mb-4">WE LOVE U!</h1>
+            <p class="mb-8">SO HERE ARE YOU FAVS MOVIES</p>
         </div>
     </div>
     
-    <main id = "contenedor-main" class="flex flex-row flex flex-wrap gap-20 place-content-center font-bold bg-black text-white overflow-hidden">
+    <h1 class="text-4xl font-bold mb-4 text-white text-center pt-4">FAVORITES</h1>
+    <main id = "contenedor-fav" class=" flex flex-row flex flex-wrap gap-20 place-content-center bg-black text-white font-sans overflow-hidden">
     </main>
     <footer class="bg-indigo-900 text-white text-center">
         <p>MindHub © Noemi Maldonado</p>
    </footer>
-   <script type="module" src="./assets/scripts/details.js"></script>
-   <script type="module" src="./assets/scripts/movie.js"></script>
-    
+
+   <script type="module"src="./assets/scripts/favs.js"></script>
 </body>
 </html>
